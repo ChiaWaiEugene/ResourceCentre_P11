@@ -132,7 +132,8 @@ public class ResourceCentre {
 	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		String output = "";
 
-		for (int i = 0; i < camcorderList.size(); i++) {
+		int sizeCamcorderlist = camcorderList.size();
+		for (int i = 0; i < sizeCamcorderlist; i++) {
 
 			output += String.format("%-10s %-30s %-10s %-10s %-20d\n", camcorderList.get(i).getAssetTag(),
 					camcorderList.get(i).getDescription(), 
@@ -152,7 +153,8 @@ public class ResourceCentre {
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
 		// write your code here
-		for (int i = 0; i < chromebookList.size(); i++) {
+		int sizeChromebooklist = chromebookList.size();
+		for (int i = 0; i < sizeChromebooklist; i++) {
 
 			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
 					chromebookList.get(i).getDescription(), 
@@ -240,7 +242,8 @@ public class ResourceCentre {
 		// write your code here
 		boolean isLoaned = false;
 
-		for (int i = 0; i < chromebookList.size(); i++) {
+		int sizeChromebooklist = chromebookList.size();
+		for (int i = 0; i < sizeChromebooklist; i++) {
 			String assetTag = chromebookList.get(i).getAssetTag();
 			
 			if (tag.equalsIgnoreCase(assetTag)
@@ -274,7 +277,8 @@ public class ResourceCentre {
 	public static boolean doReturnCamcorder(ArrayList<Camcorder> camcorderList,String tag) {
 		boolean isReturned = false;
 
-		for (int i = 0; i < camcorderList.size(); i++) {
+		int sizeCamcorderlist = camcorderList.size();
+		for (int i = 0; i < sizeCamcorderlist; i++) {
 			if (tag.equalsIgnoreCase(camcorderList.get(i).getAssetTag())
 					&& camcorderList.get(i).getIsAvailable() == false) {
 				camcorderList.get(i).setIsAvailable(true);
@@ -302,7 +306,8 @@ public class ResourceCentre {
 	public static boolean doReturnChromebook(ArrayList<Chromebook> chromebookList,String tag) {
 		boolean isReturned = false;
 
-		for (int i = 0; i < chromebookList.size(); i++) {
+		int sizeChromebooklist = chromebookList.size();
+		for (int i = 0; i < sizeChromebooklist; i++) {
 			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
 					&& chromebookList.get(i).getIsAvailable() == false) {
 				chromebookList.get(i).setIsAvailable(true);
